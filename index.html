@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dragon Born (DRGR) - Alliance Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg-main: #0d0d0d;
+            --bg-card: #1b1b1b;
+            --accent-red: #ff4c4c;
+            --accent-gold: #ffa500;
+            --text-main: #f5f5f5;
+            --text-muted: #aaaaaa;
+            --border-subtle: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--accent-gold);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px 40px;
+        }
+
+        /* Nav */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000;
+            backdrop-filter: blur(6px);
+        }
+
+        .nav-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: var(--accent-red);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            font-size: 1.2rem;
+        }
+
+        nav a {
+            color: var(--text-main);
+            margin-left: 18px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-red);
+            margin-top: 0;
+        }
+
+        h1.section-title {
+            border-bottom: 2px solid var(--border-subtle);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .section-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-subtle);
+            margin: 40px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .tagline {
+            margin-top: 15px;
+            font-style: italic;
+            color: var(--accent-gold);
+        }
+
+        /* Two-column layout for rules/guidelines */
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flex-col {
+            flex: 1 1 280px;
+        }
+
+        /* Badges / labels */
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-left: 8px;
+        }
+
+        .badge-rule {
+            background-color: rgba(255, 76, 76, 0.15);
+            color: var(--accent-red);
+            border: 1px solid rgba(255, 76, 76, 0.5);
+        }
+
+        .badge-guideline {
+            background-color: rgba(255, 165, 0, 0.12);
+            color: var(--accent-gold);
+            border: 1px solid rgba(255, 165, 0, 0.5);
+        }
+
+        /* Info boxes */
+        .info-box {
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 12px;
+            margin-top: 10px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-subtle);
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-inner">
+        <div class="logo">
+            <span>🐉</span>
+            <span>DRGR • Dragon Born</span>
+        </div>
+        <nav>
+            <a href="#welcome">Home</a>
+            <a href="#rules-vs-guidelines">Rules</a>
+            <a href="#guidelines">Guidelines</a>
+            <a href="#events">Events</a>
+            <a href="#new-members">New Members</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- HERO / WELCOME -->
+    <section id="welcome">
+        <div class="hero">
+            <h1 class="hero-title">Welcome to Dragon Born (DRGR)</h1>
+            <p class="hero-subtitle">Alliance Hub • Last Z: Survival Shooter</p>
+            <p class="tagline">“We move as one. We grow as one. We survive as one.”</p>
+        </div>
+
+        <div class="section-card">
+            <p>
+                Welcome to the Dragon Born family in <strong>Last Z: Survival Shooter</strong>.
+                You are not just joining an alliance — you are joining a team built on loyalty,
+                respect, growth, and having fun together.
+            </p>
+            <p>
+                Whether you are new to the game or a seasoned survivor, we are here to help you grow,
+                learn, and succeed. In DRGR, we move as one.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>📜 How Our Rules Work</h2>
+            <p>
+                Our rules are simple by design. We are not here to control how you play —
+                we are here to protect our alliance and create a positive environment for everyone.
+            </p>
+            <p>
+                These rules exist to maintain order, protect our reputation,
+                and ensure that Dragon Born remains strong and united.
+                When rules are broken, leadership will act fairly and consistently.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- RULES VS GUIDELINES -->
+    <section id="rules-vs-guidelines">
+        <h1 class="section-title">⚔️ Rules vs. Guidelines</h1>
+
+        <div class="section-card">
+            <h2>What’s the Difference?</h2>
+            <p>
+                In Dragon Born (DRGR), we separate <span class="highlight">Rules</span> from
+                <span class="highlight">Guidelines</span> so every member knows exactly what is
+                expected and what helps the alliance run smoothly.
+            </p>
+
+            <div class="flex-row">
+                <div class="flex-col">
+                    <h3>Rules <span class="badge badge-rule">Mandatory</span></h3>
+                    <p>
+                        These are absolute. Breaking a rule can lead to warnings, penalties,
+                        or removal from the alliance. Rules exist to protect DRGR, maintain order,
+                        and uphold our reputation with other alliances.
+                    </p>
+                </div>
+                <div class="flex-col">
+                    <h3>Guidelines <span class="badge badge-guideline">Strongly Encouraged</span></h3>
+                    <p>
+                        Guidelines are not punishable like rules, but they are important for keeping
+                        the alliance active, organized, and enjoyable for everyone.
+                        Ignoring guidelines may result in being excluded from certain events,
+                        losing priority in alliance activities, or being replaced by more active members.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>Summary:</strong> Rules protect the alliance. Guidelines make the experience better
+                for everyone. Both matter.
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- ALLIANCE RULES -->
+    <section id="rules">
+        <h1 class="section-title">🛡️ Alliance Rules</h1>
+
+        <div class="section-card">
+            <h2>1️⃣ Respect Each Other <span class="badge badge-rule">Rule</span></h2>
+            <p>
+                We treat every member like family. Disrespect, harassment, drama,
+                or toxic behavior will not be tolerated.
+                We are here to enjoy the game, grow together, and build a strong community.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>2️⃣ Respect the NAP <span class="badge badge-rule">Rule</span></h2>
+            <p>
+                All Non-Aggression Pact (NAP) agreements must be followed at all times.
+                Breaking the NAP puts the entire alliance at risk and damages our reputation.
+                If unsure, ask an R4 or R5 before acting.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONSEQUENCES -->
+    <section id="consequences">
+        <h1 class="section-title">⚖️ Consequences & Accountability</h1>
+
+        <div class="section-card">
+            <h3>Step 1: Warning</h3>
+            <p>
+                For minor issues, leadership (R4/R5) will issue a warning and explain the concern.
+                We believe in communication first.
+            </p>
+
+            <h3>Step 2: Review</h3>
+            <p>
+                If behavior continues or the violation is serious, leadership will review the situation
+                and may apply temporary restrictions or internal penalties.
+            </p>
+
+            <h3>Step 3: Removal</h3>
+            <p>
+                Repeated disrespect, toxic behavior, or intentional NAP violations may result
+                in removal from Dragon Born (DRGR). Protecting the alliance always comes first.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- GUIDELINES -->
+    <section id="guidelines">
+        <h1 class="section-title">🔥 Alliance Guidelines</h1>
+
+        <div class="section-card">
+            <h2>3️⃣ Stay Active <span class="badge badge-guideline">Guideline</span></h2>
+            <p>
+                We understand life happens, but activity matters.
+            </p>
+            <ul>
+                <li><strong>3 days inactive:</strong> You will receive a warning.</li>
+                <li><strong>5 days inactive:</strong> Removal from the alliance.</li>
+            </ul>
+            <p>
+                If something comes up, just let us know. No details needed —
+                a simple message saves your spot.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>4️⃣ Listen to R4 and R5 <span class="badge badge-guideline">Guideline</span></h2>
+            <p>
+                R4 and R5 exist for a reason. We coordinate strategy, protect the alliance,
+                and keep things running smoothly. Enjoy the game,
+                but remember you are part of a team with shared rules.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>5️⃣ Help Each Other <span class="badge badge-guideline">Guideline</span></h2>
+            <p class="highlight">
+                “We are only as strong as our weakest link.”
+            </p>
+            <p>
+                If someone needs help — zombies, events, resources, advice —
+                we move as a team. Growth happens through communication and support.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>6️⃣ Rally & Event Participation <span class="badge badge-guideline">Guideline</span></h2>
+            <p>
+                Some events are at fixed times, and we understand not everyone can attend.
+                But events like Alliance Duel run for a full week with 24-hour windows to contribute.
+                Please participate when possible — these events strengthen the entire alliance.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>7️⃣ Participate in Chat <span class="badge badge-guideline">Guideline</span></h2>
+            <p>
+                You don’t have to talk constantly, but please read:
+            </p>
+            <ul>
+                <li>Alliance mails</li>
+                <li>Notices</li>
+                <li>Polls</li>
+            </ul>
+            <p>
+                Staying informed helps you and helps the alliance.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>8️⃣ Resource Donation <span class="badge badge-guideline">Guideline</span></h2>
+            <p>
+                Donate whenever you can. Use the thumbs-up in Alliance Contribution
+                to support ongoing research. Every bit helps the whole alliance grow.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>9️⃣ Keep the Drama Out <span class="badge badge-guideline">Guideline</span></h2>
+            <p>
+                We’re a family. Leave the drama at the door and keep the alliance
+                a positive place for everyone.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- EVENTS & PARTICIPATION -->
+    <section id="events">
+        <h1 class="section-title">📆 Events & Participation</h1>
+
+        <div class="section-card">
+            <h2>Alliance Events</h2>
+            <p>
+                DRGR participates in key alliance events to grow stronger together. Watch alliance mail
+                and chat for:
+            </p>
+            <ul>
+                <li><strong>Alliance Duel:</strong> Week-long event with 24-hour windows to contribute.</li>
+                <li><strong>Rallies & Bosses:</strong> Join when you can to help the team and earn rewards.</li>
+                <li><strong>Special Server Events:</strong> Follow R4/R5 guidance for coordinated actions.</li>
+            </ul>
+            <div class="info-box">
+                <strong>Note:</strong> Consistently ignoring events may affect your priority for future
+                lineups or spots in the alliance.
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- NEW MEMBERS / CONTACT -->
+    <section id="new-members">
+        <h1 class="section-title">🧭 New Members & Expectations</h1>
+
+        <div class="section-card">
+            <h2>For New Recruits</h2>
+            <p>
+                If you are new to DRGR, start by:
+            </p>
+            <ul>
+                <li>Reading the <a href="#rules">Rules</a> and <a href="#guidelines">Guidelines</a>.</li>
+                <li>Saying hello in alliance chat.</li>
+                <li>Letting R4/R5 know your time zone and activity level.</li>
+            </ul>
+            <p>
+                We don’t expect perfection — we expect communication and effort.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>Leadership & Contact</h2>
+            <p>
+                If you have questions, problems, or need help:
+            </p>
+            <ul>
+                <li>Message any <strong>R4</strong> or <strong>R5</strong> in-game.</li>
+                <li>Ask in alliance chat — someone is usually around to help.</li>
+                <li>For conflicts, speak privately with leadership instead of starting drama in chat.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Dragon Born (DRGR) — Last Z: Survival Shooter • “We move as one.”
+    </footer>
+</div>
+
+</body>
+</html>
