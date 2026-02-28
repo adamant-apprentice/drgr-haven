@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DRGR Guide #1 - Core Survival Skills</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        :root {
+            --bg-main: #0d0d0d;
+            --bg-card: #1b1b1b;
+            --accent-red: #ff4c4c;
+            --accent-gold: #ffa500;
+            --text-main: #f5f5f5;
+            --text-muted: #aaaaaa;
+            --border-subtle: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--accent-gold);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px 40px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000;
+            backdrop-filter: blur(6px);
+        }
+
+        .nav-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: var(--accent-red);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            font-size: 1.2rem;
+        }
+
+        nav a {
+            color: var(--text-main);
+            margin-left: 18px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-red);
+            margin-top: 0;
+        }
+
+        h1.section-title {
+            border-bottom: 2px solid var(--border-subtle);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .section-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-subtle);
+            margin: 40px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .tagline {
+            margin-top: 15px;
+            font-style: italic;
+            color: var(--accent-gold);
+        }
+
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flex-col {
+            flex: 1 1 280px;
+        }
+
+        .info-box {
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 12px;
+            margin-top: 10px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border-subtle);
+            padding: 8px 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #151515;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-subtle);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style> -->
+</head>
+<body>
+
+<header>
+    <div class="nav-inner">
+        <div class="logo">
+            <span>🐉</span>
+            <span>DRGR • Core Survival</span>
+        </div>
+        <nav>
+            <a href="#welcome">Home</a>
+            <a href="#apo-time">APO Time</a>
+            <a href="#navigation">Navigation</a>
+            <a href="#daily-tasks">Daily Tasks</a>
+            <a href="#big-events">Big Events</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- HERO / INTRO -->
+    <section id="welcome">
+        <div class="hero">
+            <h1 class="hero-title">Guide #1 – Core Survival Skills</h1>
+            <p class="hero-subtitle">Dragon Race (DRGR) • Last Z: Survival Shooter</p>
+            <p class="tagline">“Learn the basics. Stop wasting time. Start growing for real.”</p>
+        </div>
+
+        <div class="section-card">
+            <p>
+                This guide is for <strong>new and returning players</strong> in Dragon Race (DRGR).
+                It covers the most basic but most important skills you need to play the game
+                without feeling lost or confused.
+            </p>
+            <p>
+                Once you understand this page, you will know how to read the game’s time,
+                find the important menus, do your daily tasks, and understand the big events
+                that many players mix up.
+            </p>
+            <div class="info-box">
+                <strong>Tip:</strong> Master this page first. Then move on to the next DRGR guides
+                for deeper strategy.
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- APO TIME -->
+    <section id="apo-time">
+        <h1 class="section-title">🕒 APO Time – The Game’s Clock</h1>
+
+        <div class="section-card">
+            <h2>What Is APO Time?</h2>
+            <p>
+                APO time is the <span class="highlight">official game time</span>.
+                All events, resets, and timers follow APO time — not your local phone time.
+            </p>
+            <ul>
+                <li>APO time is shown at the top of your game screen.</li>
+                <li>Daily missions reset at <span class="highlight">00:00 APO</span>.</li>
+                <li>Event start and end times always use APO time.</li>
+            </ul>
+            <p>
+               You can also <span class="highlight">toggle between APO time and your local time</span>. 
+               This helps you see exactly when an event starts in your own timezone,
+               so you don’t have to calculate it yourself.
+            </p>
+            <p>
+                How to See Time in Last Z:
+            </p>
+            <div>
+                <iframe width="350" height="350" 
+                src="https://www.youtube.com/embed/JlTWJLpRjKU" 
+                title="Last Z - [DRGR] How to See APO Time" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen></iframe>
+            </div>
+
+            <div class="info-box">
+                <strong>If you miss events often:</strong> you are probably looking at your local time
+                instead of APO time.
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2>Why APO Time Matters</h2>
+            <p>
+                Understanding APO time helps you:
+            </p>
+            <ul>
+                <li>Know when daily missions reset.</li>
+                <li>Plan for Alliance Duel days and other events.</li>
+                <li>Show up on time for big fights like Capital and State Ruler.</li>
+            </ul>
+            <p>
+                Once you get used to checking APO time, you will stop missing rewards
+                and start planning your growth better.
+            </p>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- NAVIGATION -->
+    <section id="navigation">
+    <h1 class="section-title">🧭 Finding Your Way Around</h1>
+
+    <!-- EVENT CENTER -->
+    <div class="section-card">
+        <h2>📅 Event Center</h2>
+        <p>
+            The Event Center is where you see all active events, rewards, and timers.
+            This is the most important place for alliance participation because it shows:
+        </p>
+        <ul>
+            <li>Alliance Duel scoring days</li>
+            <li>Capital Clash and State Ruler timers</li>
+            <li>Special server events</li>
+            <li>Daily and weekly challenges</li>
+        </ul>
+
+        <!-- VIDEO PLACEHOLDER -->
+        <div class="info-box">
+            <strong>Video:</strong> How to navigate the Event Center.
+        </div>
+        <div>
+            <iframe width="350" height="350" 
+            src="https://www.youtube.com/embed/NFdpVM_t7n0" 
+            title="Last Z - [DRGR] Navigate Event Center" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- ALLIANCE PAGE -->
+    <div class="section-card">
+        <h2>🤝 Alliance Page</h2>
+        <p>
+            This is your alliance home. Everything you do to support DRGR starts here.
+            You can:
+        </p>
+        <ul>
+            <li>Donate to alliance tech</li>
+            <li>Use the alliance shop</li>
+            <li>Teleport to alliance territory</li>
+            <li>Join rallies and see rally timers</li>
+            <li>Read announcements from R4/R5</li>
+        </ul>
+
+        <!-- VIDEO PLACEHOLDER -->
+        <div class="info-box">
+            <strong>Video:</strong> How to use the Alliance Page.
+        </div>
+        <div>
+            <iframe width="350" height="350" 
+            src="https://www.youtube.com/embed/V_JsgQRl68U" 
+            title="Last Z - [DRGR] Alliance Page Menu" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- MAIL -->
+    <div class="section-card">
+        <h2>✉️ Mail</h2>
+        <p>
+            Your mail is where you receive:
+        </p>
+        <ul>
+            <li>Alliance announcements</li>
+            <li>Event rewards</li>
+            <li>Battle reports</li>
+            <li>Important instructions from leadership</li>
+        </ul>
+        <p>
+            Reading your mail is one of the easiest ways to stay informed and avoid missing events.
+        </p>
+
+        <!-- VIDEO PLACEHOLDER -->
+        <div class="info-box">
+            <strong>Video:</strong> Understanding your Mail.
+        </div>
+        <div>
+            <iframe width="350" height="350" 
+            src="https://www.youtube.com/embed/dafBWG4D0Uc" 
+            title="Laat Z - [DRGR] Mail and Announcements" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+    <hr>
+
+    <!-- DAILY TASKS -->
+    <section id="daily-tasks">
+        <h1 class="section-title">📅 Daily Tasks – The Basics</h1>
+
+        <div class="section-card">
+            <h2>Simple Things You Should Do Every Day</h2>
+            <p>
+                Even if you only log in for a short time, doing these tasks will keep your account growing.
+            </p>
+            <ul>
+                <li>Alliance donations</li>
+                <li>Alliance tech contribution</li>
+                <li>Daily missions</li>
+                <li>Refugee camp</li>
+                <li>Hero initiative</li>
+                <li>Intel missions</li>
+                <li>Train troops</li>
+                <li>Collect resources in your shelter</li>
+                <li>Join rallies when you are online</li>
+            </ul>
+            <div class="info-box">
+                <strong>Reminder:</strong> You don’t need to be online all day.
+                Just doing these basics daily makes a big difference over time.
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2>Why Daily Tasks Matter</h2>
+            <p>
+                Daily tasks give:
+            </p>
+            <ul>
+                <li>Resources and speed-ups</li>
+                <li>Hero XP and shards</li>
+                <li>Alliance contribution and tech growth</li>
+                <li>Steady power increase without spending money</li>
+            </ul>
+            <p>
+                Players who do their dailies grow much faster than players who only log in
+                to click random things.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- BIG EVENTS -->
+    <section id="big-events">
+        <h1 class="section-title">🏛️ Big Events – Don’t Get Confused</h1>
+
+        <div class="section-card">
+            <h2>Three Events Many Players Mix Up</h2>
+            <p>
+                These three events sound similar but are very different:
+                <span class="highlight">Capital Clash</span>,
+                <span class="highlight">State Ruler</span>, and
+                <span class="highlight">Alliance Duel</span>.
+            </p>
+            <p>
+                Understanding the difference will help you know when to fight,
+                when to follow server rules, and when to focus on points.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2>Capital Clash – Practice Capital War</h2>
+            <p>
+                Capital Clash is a <span class="highlight">warm-up event</span>
+                that happens before State Ruler.
+            </p>
+            <ul>
+                <li>Everyone on the server can fight.</li>
+                <li>Fights happen around the Capital.</li>
+                <li>Rewards are decent but not the biggest.</li>
+                <li>Used to practice Capital fighting and coordination.</li>
+            </ul>
+            <div class="info-box">
+                <strong>Think of it as:</strong> “Practice round for the real Capital war.”
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2>State Ruler – The Real Capital War</h2>
+            <p>
+                State Ruler is the <span class="highlight">main Capital event</span>.
+                Your whole server fights another server.
+            </p>
+            <ul>
+                <li>Goal: capture or defend the Capital.</li>
+                <li>Biggest rewards and strongest buffs.</li>
+                <li>Requires coordination and following server rules.</li>
+                <li>Happens at the end of the event cycle.</li>
+            </ul>
+            <div class="info-box">
+                <strong>Think of it as:</strong> “The real war for control of the server.”
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2>Alliance Duel – Alliance vs Alliance Points</h2>
+            <p>
+                Alliance Duel is a <span class="highlight">weekly event</span>
+                where your alliance competes against another alliance.
+            </p>
+            <ul>
+                <li>You score points by doing daily tasks (Hero Day, Research Day, etc.).</li>
+                <li>Only your alliance and the enemy alliance are involved.</li>
+                <li>No Capital fighting — it’s about points, not territory.</li>
+                <li>Runs for a full week with 24-hour windows to contribute.</li>
+            </ul>
+            <div class="info-box">
+                <strong>Think of it as:</strong> “Weekly competition to see which alliance is more active and efficient.”
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2>Simple Comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Who Fights?</th>
+                        <th>Main Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="highlight">Capital Clash</span></td>
+                        <td>Your whole server</td>
+                        <td>Practice Capital fight (warm-up)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">State Ruler</span></td>
+                        <td>Your server vs another server</td>
+                        <td>Real Capital war for big rewards</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">Alliance Duel</span></td>
+                        <td>Your alliance only</td>
+                        <td>Weekly points competition</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="info-box">
+                <strong>If you remember this table,</strong> you will not confuse these events again.
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- SUMMARY / NEXT STEP -->
+    <section id="summary">
+        <h1 class="section-title">🎯 What You Should Know After This Guide</h1>
+
+        <div class="section-card">
+            <ul>
+                <li>You know what <span class="highlight">APO time</span> is and why it matters.</li>
+                <li>You can find the <span class="highlight">Event Center, Alliance Page, Hero Page, Backpack, Missions, and Mail</span> quickly.</li>
+                <li>You understand the basic <span class="highlight">daily tasks</span> you should do every day.</li>
+                <li>You know the difference between <span class="highlight">Capital Clash, State Ruler, and Alliance Duel</span>.</li>
+            </ul>
+            <p>
+                Once you are comfortable with everything on this page,
+                you are ready for the next DRGR guide:
+                <span class="highlight">Resource Management & What Not to Waste</span>.
+            </p>
+        </div>
+    </section>
+
+    <div style="
+    margin-top: 25px;
+    text-align: center;">
+    <a href="guide2.html" style="
+        display: inline-block;
+        background-color: var(--accent-red);
+        color: var(--text-main);
+        padding: 12px 22px;
+        border-radius: 6px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    ">
+        Next: Guide #2 – Resource Management
+    </a>
+</div>
+
+
+    <footer>
+        © 2026 Dragon Race (DRGR) — Core Survival Guide #1 • “We move as one.”
+    </footer>
+</div>
+
+</body>
+</html>
